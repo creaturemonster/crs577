@@ -1,0 +1,27 @@
+<project name="ex01" basedir=".">
+    <property name="appname" value="${ant.project.name}" />
+
+    <import file="../build-common.xml" />
+    
+    <property name="wsgen.sei" value="com.gdr.forex.CurrencyConverter" />
+    
+    <property name="wsdl.url" value="http://localhost:8080/${appname}/currencyconverter?wsdl" />
+    
+    <target name="build-web-service"
+            depends="wsgen"
+            description="Builds a code-first JAX-WS service">
+    </target>
+    
+    <target name="wsgen" 
+            depends="common.wsgen" 
+            description="Runs wsgen from build-common.xml">
+        <!-- See build-common.xml for definitions of common targets -->
+    </target>
+    
+    <target name="deploy"
+            depends="common.deploy"
+            description="Deploys the web service">
+        <echo>To test the service, visit ${wsdl.url}</echo>
+    </target>
+    
+</project>

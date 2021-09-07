@@ -1,0 +1,19 @@
+<html>
+<body>
+<h2>Hints for Exercise 1.1</h2>
+
+<h3>CurrencyConverter.java</h3>
+<font color="grey"><pre>// TODO: Mark this class as a web service</pre></font>
+<font color="blue"><pre>@WebService</pre></font>
+<font color="grey"><pre>public class CurrencyConverter {</pre></font>
+<font color="grey"><pre>	...</pre></font>
+<p></p>
+<font color="grey"><pre>	// TODO: if the "from" value is less than zero or greater than one billion,</pre></font>
+<font color="grey"><pre>	//       throw an IllegalArgumentException</pre></font>
+<font color="blue"><pre>	if (fromValue &lt; 0 || fromValue &gt; 1000000000) {</pre></font>
+<font color="blue"><pre>		throw new IllegalArgumentException("Value " +</pre></font>
+<font color="blue"><pre>			value + " is out of range (0 < value <= 1000000000");</pre></font>
+<font color="blue"><pre>	}</pre></font>
+
+</body>
+</html>
